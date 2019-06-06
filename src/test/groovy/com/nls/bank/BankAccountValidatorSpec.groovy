@@ -162,8 +162,8 @@ class BankAccountValidatorSpec extends Specification {
         result == expected
 
         where:
-        name                                      | sortCode    | accountNumber | expected
-        '18 Exception 8 where the check passes.'  | '086090'    | '06774744'    | true
+        name                                     | sortCode | accountNumber | expected
+        '18 Exception 8 where the check passes.' | '086090' | '06774744'    | true
     }
 
     @Unroll("#name")
@@ -244,4 +244,20 @@ class BankAccountValidatorSpec extends Specification {
         '6 digits'           | '30-90-70' | '123456'      | true
     }
 
+    @Unroll("#name")
+    def "I don't get an exception when I try to validate badly formated numbers"() {
+        given:
+        BankAccountValidator validator = new BankAccountValidator();
+
+        when:
+        boolean result = validator.valid(sortCode, accountNumber);
+
+        then:
+        !result
+
+        where:
+        name                 | sortCode   | accountNumber
+        'Bad sort code'      | '50-00'    | '12345678'
+        'Bad account number' | '08-02-11' | '123'
+    }
 }

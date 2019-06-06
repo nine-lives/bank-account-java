@@ -4,6 +4,7 @@
 [![Build Status](https://api.travis-ci.org/nine-lives/bank-account-java.png)](https://travis-ci.org/nine-lives/bank-account-java)
 [![Code Quality](https://api.codacy.com/project/badge/grade/b567861b416a4c01b782bb8754ec48f8)](https://www.codacy.com/app/nine-lives/bank-account-java)
 [![Coverage](https://api.codacy.com/project/badge/coverage/b567861b416a4c01b782bb8754ec48f8)](https://www.codacy.com/app/nine-lives/bank-account-java)
+[![Javadocs](https://www.javadoc.io/badge/com.9ls/bank-account.svg)](https://www.javadoc.io/doc/com.9ls/bank-account)
 
 ## Getting Started
 

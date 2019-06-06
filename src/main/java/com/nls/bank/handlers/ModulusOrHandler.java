@@ -7,6 +7,10 @@ import com.nls.bank.ModulusRule;
 import com.nls.bank.ModulusValidationHandler;
 import com.nls.bank.ModulusValidationResult;
 
+/**
+ * Handler that checks modulus is valid and returns result that halts and passes validation
+ * if ANY rule passes check
+ */
 public class ModulusOrHandler implements ModulusValidationHandler {
     @Override
     public ModulusValidationResult valid(BankAccount account, ModulusRule rule) {

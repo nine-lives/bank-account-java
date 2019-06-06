@@ -8,10 +8,10 @@ class BankAccountValidatorSpec extends Specification {
     @Unroll("#name")
     def "I can check if account details are valid"() {
         given:
-        BankAccountValidator checker = new BankAccountValidator();
+        BankAccountValidator validator = new BankAccountValidator();
 
         when:
-        boolean result = checker.valid(sortCode, accountNumber);
+        boolean result = validator.valid(sortCode, accountNumber);
 
         then:
         result == expected
@@ -30,10 +30,10 @@ class BankAccountValidatorSpec extends Specification {
     @Unroll("#name")
     def "I can check if account details are valid for exception 1"() {
         given:
-        BankAccountValidator checker = new BankAccountValidator();
+        BankAccountValidator validator = new BankAccountValidator();
 
         when:
-        boolean result = checker.valid(sortCode, accountNumber);
+        boolean result = validator.valid(sortCode, accountNumber);
 
         then:
         result == expected
@@ -47,10 +47,10 @@ class BankAccountValidatorSpec extends Specification {
     @Unroll("#name")
     def "I can check if account details are valid for exception 2 and 9"() {
         given:
-        BankAccountValidator checker = new BankAccountValidator();
+        BankAccountValidator validator = new BankAccountValidator();
 
         when:
-        boolean result = checker.valid(sortCode, accountNumber);
+        boolean result = validator.valid(sortCode, accountNumber);
 
         then:
         result == expected
@@ -66,10 +66,10 @@ class BankAccountValidatorSpec extends Specification {
     @Unroll("#name")
     def "I can check if account details are valid  for exception 3"() {
         given:
-        BankAccountValidator checker = new BankAccountValidator();
+        BankAccountValidator validator = new BankAccountValidator();
 
         when:
-        boolean result = checker.valid(sortCode, accountNumber);
+        boolean result = validator.valid(sortCode, accountNumber);
 
         then:
         result == expected
@@ -84,10 +84,10 @@ class BankAccountValidatorSpec extends Specification {
     @Unroll("#name")
     def "I can check if account details are valid for exception 4"() {
         given:
-        BankAccountValidator checker = new BankAccountValidator();
+        BankAccountValidator validator = new BankAccountValidator();
 
         when:
-        boolean result = checker.valid(sortCode, accountNumber);
+        boolean result = validator.valid(sortCode, accountNumber);
 
         then:
         result == expected
@@ -100,10 +100,10 @@ class BankAccountValidatorSpec extends Specification {
     @Unroll("#name")
     def "I can check if account details are valid for exception 5"() {
         given:
-        BankAccountValidator checker = new BankAccountValidator();
+        BankAccountValidator validator = new BankAccountValidator();
 
         when:
-        boolean result = checker.valid(sortCode, accountNumber);
+        boolean result = validator.valid(sortCode, accountNumber);
 
         then:
         result == expected
@@ -121,10 +121,10 @@ class BankAccountValidatorSpec extends Specification {
     @Unroll("#name")
     def "I can check if account details are valid for exception 6"() {
         given:
-        BankAccountValidator checker = new BankAccountValidator();
+        BankAccountValidator validator = new BankAccountValidator();
 
         when:
-        boolean result = checker.valid(sortCode, accountNumber);
+        boolean result = validator.valid(sortCode, accountNumber);
 
         then:
         result == expected
@@ -137,10 +137,10 @@ class BankAccountValidatorSpec extends Specification {
     @Unroll("#name")
     def "I can check if account details are valid for exception 7"() {
         given:
-        BankAccountValidator checker = new BankAccountValidator();
+        BankAccountValidator validator = new BankAccountValidator();
 
         when:
-        boolean result = checker.valid(sortCode, accountNumber);
+        boolean result = validator.valid(sortCode, accountNumber);
 
         then:
         result == expected
@@ -153,10 +153,10 @@ class BankAccountValidatorSpec extends Specification {
     @Unroll("#name")
     def "I can check if account details are valid for exception 8"() {
         given:
-        BankAccountValidator checker = new BankAccountValidator();
+        BankAccountValidator validator = new BankAccountValidator();
 
         when:
-        boolean result = checker.valid(sortCode, accountNumber);
+        boolean result = validator.valid(sortCode, accountNumber);
 
         then:
         result == expected
@@ -169,10 +169,10 @@ class BankAccountValidatorSpec extends Specification {
     @Unroll("#name")
     def "I can check if account details are valid for exception 10 and 11"() {
         given:
-        BankAccountValidator checker = new BankAccountValidator();
+        BankAccountValidator validator = new BankAccountValidator();
 
         when:
-        boolean result = checker.valid(sortCode, accountNumber);
+        boolean result = validator.valid(sortCode, accountNumber);
 
         then:
         result == expected
@@ -192,10 +192,10 @@ class BankAccountValidatorSpec extends Specification {
     @Unroll("#name")
     def "I can check if account details are valid for exception 12 and 13"() {
         given:
-        BankAccountValidator checker = new BankAccountValidator();
+        BankAccountValidator validator = new BankAccountValidator();
 
         when:
-        boolean result = checker.valid(sortCode, accountNumber);
+        boolean result = validator.valid(sortCode, accountNumber);
 
         then:
         result == expected
@@ -210,10 +210,10 @@ class BankAccountValidatorSpec extends Specification {
     @Unroll("#name")
     def "I can check if account details are valid for exception 14"() {
         given:
-        BankAccountValidator checker = new BankAccountValidator();
+        BankAccountValidator validator = new BankAccountValidator();
 
         when:
-        boolean result = checker.valid(sortCode, accountNumber);
+        boolean result = validator.valid(sortCode, accountNumber);
 
         then:
         result == expected
@@ -227,10 +227,10 @@ class BankAccountValidatorSpec extends Specification {
     @Unroll("#name")
     def "I can validate non standard accounts"() {
         given:
-        BankAccountValidator checker = new BankAccountValidator();
+        BankAccountValidator validator = new BankAccountValidator();
 
         when:
-        boolean result = checker.valid(sortCode, accountNumber);
+        boolean result = validator.valid(sortCode, accountNumber);
 
         then:
         result == expected

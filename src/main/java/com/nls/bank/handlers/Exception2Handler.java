@@ -9,6 +9,9 @@ import com.nls.bank.SortCodeRange;
 
 import java.util.Optional;
 
+/**
+ * Handler for exception 2 modulus weights
+ */
 public class Exception2Handler extends ModulusOrHandler {
     private static final ModulusRule ALT_RULE_1 = new ModulusRule(
             new SortCodeRange(0, 999999),

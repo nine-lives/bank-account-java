@@ -6,6 +6,9 @@ import com.nls.bank.ModulusRule;
 import com.nls.bank.ModulusValidationHandler;
 import com.nls.bank.ModulusValidationResult;
 
+/**
+ * Handler for exception 1 modulus weights
+ */
 public class Exception1Handler implements ModulusValidationHandler {
     @Override
     public ModulusValidationResult valid(BankAccount account, ModulusRule rule) {

@@ -11,6 +11,9 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+/**
+ * Handler for exception 14 modulus weights
+ */
 public class Exception14Handler implements ModulusValidationHandler {
     private static final Set<Integer> ACCEPTED_VALUES = Stream.of(0, 1, 9).collect(Collectors.toSet());
 

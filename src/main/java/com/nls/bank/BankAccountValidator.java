@@ -45,7 +45,11 @@ public class BankAccountValidator {
      * @return true if valid, false otherwise
      */
     public boolean valid(String sortCode, String accountNumber) {
-        return valid(new BankAccount(sortCode, accountNumber));
+        try {
+            return valid(new BankAccount(sortCode, accountNumber));
+        } catch (IllegalArgumentException ignore) {
+            return false;
+        }
     }
 
     /**

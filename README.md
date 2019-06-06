@@ -13,21 +13,21 @@ The sdk is hosted on maven central so you can include it as a dependency in your
 
 ### Gradle/Grails
 ```
-    compile 'com.9ls:bank-account-java:1.0.1'
+    compile 'com.9ls:bank-account:1.0.2'
 ```
 
 ### Apache Maven
 ```
     <dependency>
         <groupId>com.9ls</groupId>
-        <artifactId>bank-account-java</artifactId>
-        <version>1.0.1</version>
+        <artifactId>bank-account</artifactId>
+        <version>1.0.2</version>
     </dependency>
 ```
 
 ### Apache Ivy
 ```
-    <dependency org="com.9ls" name="bank-account-java" rev="1.0.1" />
+    <dependency org="com.9ls" name="bank-account" rev="1.0.2" />
 ```
 
 ## Validation and Modulus Checking
@@ -85,10 +85,10 @@ with different files.
             ModulusValidationHandlerProvider.getInstance());
 ```
 
-| Name | File | Version | SDK Version
+| Name | File | Version | SDK Version |
 | ---- | ---- | ------ | --- |
-| Sorting Code Substitution Data | scsubtab.txt | Valid from 13 June 2005 | 1.0.0+
-| Modulus Weight Table Data | valacdos.txt | Valid from 27 May 2019 | 1.0.0+
+| Sorting Code Substitution Data | scsubtab.txt | Valid from 13 June 2005 | 1.0.0+ |
+| Modulus Weight Table Data | valacdos.txt | Valid from 27 May 2019 | 1.0.0+ |
 
 ## Build
 

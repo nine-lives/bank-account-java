@@ -1,6 +1,6 @@
 # UK Bank Account Utils and Modulus Validation Java SDK
 
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.9ls/bank-account-java/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.9ls/bank-account-java)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.9ls/bank-account/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.9ls/bank-account-java)
 [![Build Status](https://api.travis-ci.org/nine-lives/bank-account-java.png)](https://travis-ci.org/nine-lives/bank-account-java)
 [![Code Quality](https://api.codacy.com/project/badge/grade/b567861b416a4c01b782bb8754ec48f8)](https://www.codacy.com/app/nine-lives/bank-account-java)
 [![Coverage](https://api.codacy.com/project/badge/coverage/b567861b416a4c01b782bb8754ec48f8)](https://www.codacy.com/app/nine-lives/bank-account-java)

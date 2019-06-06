@@ -12,11 +12,13 @@ This SDK allows you to validate sort code and account number combinations pass t
 The sdk is hosted on maven central so you can include it as a dependency in your projects as follows:
 
 ### Gradle/Grails
+
 ```
     compile 'com.9ls:bank-account:1.0.2'
 ```
 
 ### Apache Maven
+
 ```
     <dependency>
         <groupId>com.9ls</groupId>
@@ -34,7 +36,7 @@ The sdk is hosted on maven central so you can include it as a dependency in your
 
 To check a bank account:
 
-```
+```java
         BankAccountValidator validator = new BankAccountValidator();
         boolean valid = validator.valid('08-60-90', '06774744');
 ```
@@ -42,6 +44,7 @@ To check a bank account:
 ## SortCode Entity
 
 You can use the SortCode entity to represent a sort code:
+
 ```java 
     SortCode sc = new SortCode("12-34-56");
     sc.toString().equals("12-34-56");  
@@ -50,6 +53,7 @@ You can use the SortCode entity to represent a sort code:
 ```
 
 You don't need to have the hyphens:    
+
 ```java 
     SortCode sc = new SortCode("123456");
     sc.toString().equals("12-34-56");
@@ -65,6 +69,7 @@ Or you can construct it with an integer
 ## BankAccount Entity
 
 You can use the BankAccount entity to represent a sort code and account number tuple:
+
 ```java 
     BankAccount account = new BankAccount('08-60-90', '06774744');
     account.getSortCode().toString().equals('08-60-90');

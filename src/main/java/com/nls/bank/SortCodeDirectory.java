@@ -21,6 +21,15 @@ public final class SortCodeDirectory {
     }
 
     /**
+     * Does the sort code belong to The Leeds Building Society
+     * @param sortCode the sort code
+     * @return true if it does, false otherwise
+     */
+    public static boolean isLeeds(SortCode sortCode) {
+        return sortCode.toInt() == 86119;
+    }
+
+    /**
      * Does the sort code belong to The Cooperative Bank
      * @param sortCode the sort code
      * @return true if it does, false otherwise
@@ -51,4 +60,5 @@ public final class SortCodeDirectory {
     private static int code2(SortCode sortCode) {
         return sortCode.toInt() / 10000;
     }
+
 }

@@ -47,6 +47,21 @@ class SortCodeDirectorySpec extends Specification {
         '08-40-00' | true
     }
 
+    @Unroll("I can check if it is a Leeds Building Society sort code - #sortCode")
+    def "I can check if it is a Leeds Building Society sort code"() {
+        when:
+        boolean result = SortCodeDirectory.isLeeds(new SortCode(sortCode))
+
+        then:
+        result == expected
+
+        where:
+        sortCode | expected
+        '08-61-18' | false
+        '08-61-19' | true
+        '08-61-20' | false
+    }
+
     @Unroll("I can check if it is a Santander sort code - #sortCode")
     def "I can check if it is a Santander sort code"() {
         when:

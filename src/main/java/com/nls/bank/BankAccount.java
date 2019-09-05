@@ -97,6 +97,9 @@ public class BankAccount implements Serializable {
                 if (SortCodeDirectory.isCoop(sortCode)) {
                     return withAccountNumber(an.substring(0, 8));
                 }
+                if (SortCodeDirectory.isLeeds(sortCode)) {
+                    return withAccountNumber(an.substring(0, 8));
+                }
                 break;
             case 9:
                 if (SortCodeDirectory.isSantander(sortCode)) {

@@ -245,7 +245,7 @@ class BankAccountValidatorSpec extends Specification {
     }
 
     @Unroll("#name")
-    def "I don't get an exception when I try to validate badly formated numbers"() {
+    def "I don't get an exception when I try to validate badly formatted numbers"() {
         given:
         BankAccountValidator validator = new BankAccountValidator();
 

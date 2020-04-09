@@ -50,7 +50,7 @@ public class ModulusTable {
      * @throws IOException
      */
     public static ModulusTable load() throws IOException {
-        try (InputStream in = ModulusTable.class.getResourceAsStream("/valacdos.txt")) {
+        try (InputStream in = ModulusTable.class.getResourceAsStream("/valacdos-2020-04-07.txt")) {
             return load(in);
         }
     }

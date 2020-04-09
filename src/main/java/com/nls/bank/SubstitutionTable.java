@@ -61,7 +61,7 @@ public class SubstitutionTable {
      * @throws IOException
      */
     public static SubstitutionTable load() throws IOException {
-        try (InputStream in = ModulusTable.class.getResourceAsStream("/scsubtab.txt")) {
+        try (InputStream in = ModulusTable.class.getResourceAsStream("/scsubtab-2005-06-13.txt")) {
             return load(in);
         }
     }

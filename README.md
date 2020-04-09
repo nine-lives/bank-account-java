@@ -15,7 +15,7 @@ The sdk is hosted on maven central so you can include it as a dependency in your
 ### Gradle/Grails
 
 ```
-    compile 'com.9ls:bank-account:1.0.4'
+    compile 'com.9ls:bank-account:1.6.1'
 ```
 
 ### Apache Maven
@@ -24,13 +24,13 @@ The sdk is hosted on maven central so you can include it as a dependency in your
     <dependency>
         <groupId>com.9ls</groupId>
         <artifactId>bank-account</artifactId>
-        <version>1.0.4</version>
+        <version>1.6.1</version>
     </dependency>
 ```
 
 ### Apache Ivy
 ```
-    <dependency org="com.9ls" name="bank-account" rev="1.0.4" />
+    <dependency org="com.9ls" name="bank-account" rev="1.6.1" />
 ```
 
 ## Validation and Modulus Checking
@@ -97,6 +97,7 @@ with different files.
 | Modulus Weight Table Data | valacdos.txt | Valid from 27 May 2019 | 1.0.0+ |
 | Modulus Weight Table Data | valacdos.txt | Valid from 29 September 2019 | 1.0.3 |
 | Modulus Weight Table Data | valacdos.txt | Valid from 6 April 2020 | 1.0.4 |
+| Modulus Weight Table Data | valacdos.txt | Valid from 7 April 2020 | 1.6.1 |
 
 ## Build
 

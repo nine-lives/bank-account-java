@@ -80,7 +80,7 @@ You can use the BankAccount entity to represent a sort code and account number t
 ## Validation and Substitution Tables
 
 The SDK uses the latest valacdos.txt and scsubtab.txt from 
-[Vocalink](https://www.vocalink.com/customer-support/modulus-checking/).
+[Vocalink](https://www.vocalink.com/tools/modulus-checking/).
 If you need to use alternate file you can initialise the BankAccountValidator 
 with different files. 
 

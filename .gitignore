@@ -26,3 +26,7 @@ build
 .gradle
 /.idea/vcs.xml
 gradle.properties
+
+config/lib/*.jar
+config/checkstyle/*
+!config/checkstyle/checkstyle-suppressions.xml

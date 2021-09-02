@@ -13,7 +13,7 @@ class SortCodeSpec extends Specification {
         result.toString() == "12-34-56"
     }
 
-    @Unroll("I can construct a sort code from a string - #sortCode")
+    @Unroll("I can construct a sort code from a string - #value")
     def "I can construct a sort code from a string"() {
         when:
         SortCode sortCode = new SortCode(value)
@@ -50,7 +50,7 @@ class SortCodeSpec extends Specification {
     }
 
 
-    @Unroll("I can construct a sort code from an integer - #sortCode")
+    @Unroll("I can construct a sort code from an integer - #value")
     def "I can construct a sort code from an integer"() {
         when:
         SortCode sortCode = new SortCode(value)

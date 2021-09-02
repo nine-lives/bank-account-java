@@ -28,7 +28,7 @@ class ModulusValidationHandlerProviderSpec extends Specification {
         provider.get(14).class == Exception14Handler
     }
 
-    @Unroll("I can get I request a handler by rule the right handler is returned - #exception")
+    @Unroll("I can get I request a handler by rule the right handler is returned - #value")
     def "I can get I request a handler by rule the right handler is returned"() {
         given:
         ModulusValidationHandlerProvider provider = ModulusValidationHandlerProvider.instance

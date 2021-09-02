@@ -1,108 +1,34 @@
-apply plugin: 'java'
-apply plugin: 'groovy'
-apply plugin: 'maven'
-apply plugin: 'signing'
-apply plugin: 'checkstyle'
-apply plugin: 'jacoco'
-apply from: "$rootDir/coverage.gradle"
-
-sourceCompatibility = 1.8
-
 group = 'com.9ls'
-archivesBaseName = "bank-account"
-version = '1.6.3'
+version = '1.6.4'
 
-jacoco {
-    toolVersion = "0.8.2"
+project.ext {
+    library_baseName = 'bank-account'
+
+    jacoco_limits = [
+            'instruction': 90,
+            'branch'     : 85,
+            'line'       : 90,
+            'complexity' : 90,
+            'method'     : 95,
+            'class'      : 100
+    ]
+
+    jacoco_codecy = true
+
+    publish_name = 'bank-account-java'
+    publish_description = 'UK Bank Account Modulus Validation'
+    publish_url = 'https://github.com/nine-lives/bank-account-java'
+    publish_scm = 'scm:git@github.com:nine-lives/bank-account-java.git'
+    publish_license = 'https://raw.githubusercontent.com/nine-lives/bank-account-java/master/LICENSE'
+    publish_developerId = 'mgsmith57'
+    publish_developerName = 'Marc G. Smith'
+    publish_developerEmail = 'marc@9ls.com'
+    publish_credentialsUserName = project.hasProperty('ossrhUsername') ? ossrhUsername : ''
+    publish_credentialsPassword = project.hasProperty('ossrhPassword')? ossrhPassword : ''
 }
 
-signing {
-    required { gradle.taskGraph.hasTask('uploadArchives') }
-    sign configurations.archives
-}
-
-checkstyle {
-    configFile = new File(rootDir, "config/checkstyle/checkstyle.xml")
-    showViolations = false
-}
-
-repositories {
-    mavenCentral()
-}
+apply from: "https://raw.githubusercontent.com/nine-lives/gradle-scripts/main/v6/library.gradle"
+apply from: "https://raw.githubusercontent.com/nine-lives/gradle-scripts/main/v6/integration-test.gradle"
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
-    testCompile "org.spockframework:spock-core:1.0-groovy-2.4"
-}
-
-test {
-    testLogging {
-        events "failed"
-        exceptionFormat "short"
-    }
-}
-
-tasks.withType(Test) {
-    reports.html.destination = file("${reporting.baseDir}/${name}")
-}
-
-task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
-    from tasks.javadoc.destinationDir
-}
-
-task sourcesJar(type: Jar) {
-    from sourceSets.main.allSource
-    classifier = 'sources'
-}
-
-artifacts {
-    archives jar
-    archives javadocJar
-    archives sourcesJar
-}
-
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
-
-            repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
-                authentication(userName: project.hasProperty('ossrhUsername') ? ossrhUsername : '', password: project.hasProperty('ossrhPassword')? ossrhPassword : '')
-            }
-
-            snapshotRepository(url: "https://oss.sonatype.org/content/repositories/snapshots/") {
-                authentication(userName: (project.hasProperty('ossrhUsername') ? ossrhUsername : ''), password: (project.hasProperty('ossrhPassword')? ossrhPassword : ''))
-            }
-
-            pom.project {
-                name 'bank-account-java'
-                packaging 'jar'
-                description 'UK Bank Account Modulus Validation'
-                url 'https://github.com/nine-lives/bank-account-java'
-
-                scm {
-                    url 'scm:git@github.com:nine-lives/bank-account-java.git'
-                    connection 'scm:git@github.com:nine-lives/bank-account-java.git'
-                    developerConnection 'scm:git@github.com:nine-lives/bank-account-java.git'
-                }
-
-                licenses {
-                    license {
-                        name 'The MIT License (MIT)'
-                        url 'https://raw.githubusercontent.com/nine-lives/bank-account-java/master/LICENSE'
-                        distribution 'repo'
-                    }
-                }
-
-                developers {
-                    developer {
-                        id 'mgsmith57'
-                        name 'Marc G. Smith'
-                        email 'marc@9ls.com'
-                    }
-                }
-            }
-        }
-    }
 }

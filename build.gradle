@@ -28,7 +28,6 @@ project.ext {
 }
 
 apply from: "https://raw.githubusercontent.com/nine-lives/gradle-scripts/main/v6/library.gradle"
-apply from: "https://raw.githubusercontent.com/nine-lives/gradle-scripts/main/v6/integration-test.gradle"
 
 dependencies {
 }

@@ -1,5 +1,5 @@
 group = 'com.9ls'
-version = '1.6.4'
+version = '1.6.7'
 
 project.ext {
     library_baseName = 'bank-account'

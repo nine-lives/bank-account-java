@@ -5,10 +5,10 @@ jdk:
   - openjdk11
 
 after_success:
-  - java -jar $TRAVIS_BUILD_DIR/config/lib/codacy-coverage-reporter-4.0.2-assembly.jar report -l Java -r build/reports/jacoco/test/jacocoTestReport.xml
+  - bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r build/reports/jacoco/test/jacocoTestReport.xml
 
 after_failure:
-  - java -jar $TRAVIS_BUILD_DIR/config/lib/codacy-coverage-reporter-4.0.2-assembly.jar report -l Java -r build/reports/jacoco/test/jacocoTestReport.xml
+  - bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r build/reports/jacoco/test/jacocoTestReport.xml
 
 before_install:
   - chmod +x gradlew

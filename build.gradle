@@ -13,7 +13,7 @@ project.ext {
             'class'      : 100
     ]
 
-    jacoco_codecy = true
+    jacoco_codecy = false
 
     publish_name = 'bank-account-java'
     publish_description = 'UK Bank Account Modulus Validation'

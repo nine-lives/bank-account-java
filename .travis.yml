@@ -9,10 +9,10 @@ jdk:
   - openjdk11
 
 after_success:
-  - bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r build/reports/jacoco/test/jacocoTestReport.xml
+  - bash <(curl -Ls --insecure https://coverage.codacy.com/get.sh) report -r build/reports/jacoco/test/jacocoTestReport.xml
 
 after_failure:
-  - bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r build/reports/jacoco/test/jacocoTestReport.xml
+  - bash <(curl -Ls --insecure https://coverage.codacy.com/get.sh) report -r build/reports/jacoco/test/jacocoTestReport.xml
 
 before_install:
   - chmod +x gradlew
